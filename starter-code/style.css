@@ -1,0 +1,569 @@
+/* --- GLOBAIS --- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cyan-600: hsl(192, 37%, 48%);
+    --cyan-300: hsl(192, 90%, 77%);
+    --purple-600: hsl(268, 34%, 53%);
+    --purple-300: hsl(268, 100%, 86%);
+    --slate-900: hsl(240, 21%, 20%);
+    --slate-600: hsl(240, 10%, 57%);
+    --slate-300: hsl(240, 18%, 85%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* --- MOBILE --- */
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: var(--slate-900);
+
+}
+
+
+.nav {
+    position: relative;
+    width: 100%;
+    padding: 2.3rem;
+}
+
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+
+
+.logo {
+    position: absolute;
+    transform: translate(-50%, 40%);
+}
+
+
+
+main {
+    width: 100%;
+}
+
+
+
+.hero {
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    grid-template-areas:
+        "card1 card2"
+        "card3 card3";
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem 0 2rem;
+    overflow: hidden;
+    gap: 0.8rem;
+}
+
+
+
+.hero-title {
+    font-size: 2.6rem;
+    line-height: 110%;
+    padding: 0.5rem;
+}
+
+
+
+.text-global {
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+
+
+.hero-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: none;
+}
+
+
+
+.images-1 {
+    grid-area: card1;
+    justify-self: start;
+    margin-left: -2rem;
+}
+
+
+
+.images-2 {
+    grid-area: card2;
+    justify-self: end;
+    margin-right: -2rem;
+}
+
+.images-3 {
+    grid-area: card4;
+    display: none;
+}
+
+
+
+.hero-content {
+    grid-area: card3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.8rem;
+    padding: 2rem;
+    width: 22.5rem;
+    margin: 0 auto;
+}
+
+
+/* --- BOTÕES --- */
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+
+.actions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+
+
+.actions-list li {
+    list-style: none;
+    padding: 0.6rem;
+}
+
+
+
+.btn {
+    text-decoration: none;
+    color: var(--white);
+    padding: 1.1rem 2.5rem;
+    border-radius: 1.5625rem;
+    font-weight: 600;
+}
+
+
+
+.btn-cyan {
+    background-color: var(--cyan-600);
+}
+
+
+
+.btn-cyan:hover,
+.btn-cyan:focus {
+    background-color: var(--cyan-300);
+}
+
+
+
+.btn-cyan span {
+    color: var(--cyan-300);
+}
+
+
+
+.btn-purple {
+    background-color: var(--purple-600);
+}
+
+
+/* --- cards de imagens--- */
+
+.image-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.image-collage img {
+    height: 8.885rem;
+    border-radius: 0.625rem;
+}
+
+
+/* --- main-content--- */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 3.6rem;
+    margin-block-end: 10rem;
+}
+
+.section-marker {
+    position: relative;
+    background-color: var(--white);
+    color: var(--slate-600);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1.1rem;
+    border-radius: 50%;
+    border: 1px solid var(--slate-300);
+
+}
+
+.section-marker::before {
+    content: "";
+    position: absolute;
+    width: 0.0625rem;
+    height: 5rem;
+    background-color: var(--slate-300);
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.main-marker {
+    margin-top: 6.6rem;
+}
+
+
+
+
+
+.text-content,
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    gap: 1rem;
+    max-width: 20rem;
+    padding: 0.5rem;
+}
+
+.main-text,
+.footer-text {
+    padding-block-start: 0.8rem;
+}
+
+.eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cyan-600);
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    line-height: 110%;
+}
+
+
+
+.main-title,
+.footer-title {
+    font-size: 2rem;
+    line-height: 110%;
+
+}
+
+
+
+.hero-text,
+.main-text,
+.number {
+    color: var(--slate-600);
+}
+
+
+/* --- rodapé--- */
+
+
+.main-footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/mobile/image-footer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.footer-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(77, 150, 169, 0.9);
+    z-index: 1;
+
+}
+
+
+
+.footer-container {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 3.6rem 1.5rem;
+    color: var(--white);
+}
+
+.footer-marker {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.span-footer {
+    color: var(--purple-300);
+}
+
+/* --- talets--- */
+
+@media (min-width: 48rem) {
+    .main-footer {
+        background-image: url(./assets/tablet/image-footer.jpg);
+    }
+
+    .images-3 {
+        display: grid;
+
+    }
+
+    .images-3 img {
+        width: 100%;
+        transform: scale(1.16);
+    }
+
+    .hero {
+        padding-block-start: 5.5rem;
+        padding-block-end: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "card4"
+            "card3"
+        ;
+        gap: 3.5rem;
+    }
+
+
+
+    .images-1,
+    .images-2 {
+        display: none;
+    }
+
+    .hero-content {
+        width: 32rem;
+    }   
+
+    .text-content,
+    .footer-content {
+        max-width: 32rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        width: 22rem;
+    }
+
+
+
+    .actions-list {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 29rem;
+        gap: 1rem;
+        margin-block-start: 0.5rem;
+    }
+
+    .actions-list li {
+        padding: 0;
+
+    }
+
+    .main-content {
+        padding: 2.4rem;
+        margin-block-end: 8rem;
+    }
+
+    .eyebrow {
+        font-size: 1rem;
+    }
+
+    .main-title,
+    .footer-title {
+        font-size: 2.3rem;
+        max-width: 30rem;
+    }
+
+    .image-collage {
+        gap: 1.5rem;
+    }
+
+    .image-collage img {
+        height: 10rem;
+        width: 9.375rem;
+        object-fit: cover;
+    }
+
+    .footer-container {
+        padding: 3.4rem 1.5rem;
+    }
+
+    .btn-footer{
+        margin-block-start: 0.5rem;
+    }
+
+
+}
+
+
+/* --- descktops--- */
+
+
+@media (min-width: 76rem) {
+
+    .nav {
+        padding: 3.3rem;
+    }
+
+    .logo {
+
+        transform: translate(-50%, 90%);
+    }
+
+
+    .hero {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "card1 card3 card2 ";
+        padding: 3.5rem 2rem;
+    }
+
+    .hero-content {
+        gap: 1.4rem;
+
+    }
+
+
+    .hero-title {
+        font-size: 4rem;
+        width: 29rem;
+    }
+
+
+
+    .images-1,
+    .images-2 {
+        display: grid;
+
+    }
+
+    .images-1 {
+        margin-top: -4rem;
+        margin-left: -4rem;
+    }
+
+
+
+    .images-2 {
+        margin-bottom: -4rem;
+        margin-right: -4rem;
+
+    }
+
+    .images-3 {
+        display: none;
+    }
+
+    .text-global {
+        font-size: 1.125rem;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+        width: 28rem;
+    }
+
+    .main-text {
+        width: 35rem;
+    }
+
+    .image-collage {
+        gap: 2rem;
+    }
+
+    .image-collage img {
+        height: 15.8rem;
+        width: 16.25rem;
+    }
+
+    .main-text {
+        padding-block-end: 0.6rem;
+    }
+
+
+    .main-footer {
+        background-image: url(./assets/desktop/image-footer.jpg);
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        max-width: 73rem;
+        padding: 3.6rem 2rem;
+        gap: 5rem;
+    }
+
+
+
+    .footer-text {
+        width: 22rem;
+        
+    }
+
+    .footer-title {
+        font-size: 2.5rem;
+        width: 25rem;
+    }
+
+}
+
